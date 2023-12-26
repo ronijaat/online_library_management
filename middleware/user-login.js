@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken")
 const dotenv = require("dotenv");
 dotenv.config();
 
-const currentuser = async(req,res,next)=>{
+const currentus = async(req,res,next)=>{
     try{
         if(!req.session?.jwt){
             return res.status(401).send({message:"No session available"})
@@ -23,5 +23,5 @@ const currentuser = async(req,res,next)=>{
 }
 
 module.exports = {
-    currentuser
+    currentus
 }
