@@ -4,6 +4,7 @@ const session = require('express-session');
 
 const dotenv = require("dotenv");
 dotenv.config();
+const PORT = process.env.PORT || 8000
 
 const dbConnect = require("./db/conn");
 const authRouter = require("./routes/admin/auth")
