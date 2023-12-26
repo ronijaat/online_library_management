@@ -13,7 +13,7 @@ const userRouter = require("./routes/user/user");
 const app = express();
 
 const corsOptions = {
-  origin: 'http://localhost:3000', // Replace with your frontend URL
+  origin: 'https://sore-teal-trout-tam.cyclic.app/', // Replace with your frontend URL
   credentials: true,
 };
 
