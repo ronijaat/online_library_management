@@ -39,13 +39,8 @@ app.use(authRouter)
 app.use(bookRouter)
 app.use(userRouter)
 
-
-
-
-const startUp = async()=>{
-    await dbConnect();
-}
-app.listen(8000,()=>{
-    startUp()
-    console.log('Server is running on port 8000')
+dbConnect().then(() => {
+    app.listen(PORT, () => {
+        console.log("listening for requests");
+    })
 })
