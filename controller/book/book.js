@@ -149,7 +149,7 @@ const returnBook = async (req, res) => {
     const trans = new Transaction({
       user: userId,
       book: bookId,
-      date: currentDate,
+      dueDate: currentDate,
       transactionType: "returned",
     });
 
