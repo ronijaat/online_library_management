@@ -13,12 +13,7 @@ const userRouter = require("./routes/user/user");
 
 const app = express();
 
-const corsOptions = {
-  origin: 'https://sore-teal-trout-tam.cyclic.app/', // Replace with your frontend URL
-  credentials: true,
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use(session({
     secret: process.env.SECRET_KEY, // Replace with a secure secret
